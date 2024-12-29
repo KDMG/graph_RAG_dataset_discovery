@@ -1,0 +1,21 @@
+Query No.;Prompt;Response
+1;I want to analyse pollution (PM2.5 and CO2) by country and year;<{pollution_PM2_5, pollution_CO2}, {GEO.country, TIME.year}>
+2;I want data sources which measure CH4 emissions by country, year and macro sectors;<{pollution_CH4}, {GEO.country, TIME.year, SECTOR.macrosector}>
+3;Gather data about PM2.5 aggregated by region and subsector for all the years;<{pollution_PM2_5}, {GEO.region, TIME.year, SECTOR.subsector}>
+4;I would like to join data sources containing NH3 and CO2 pollutants where indicators are aggregated by country, year and subsectors;<{pollution_NH3, pollution_CO2}, {GEO.country, TIME.year, SECTOR.subsector}>
+5;I wish to analyse CH4, CO and PM10 air pollution indicators measured by country and months, also with information about subsectors;<{pollution_CH4, pollution_CO, pollution_PM10}, {GEO.country, TIME.month, SECTOR.subsector}>
+6;Collect data sources containing PM10 values for all the countries and years;<{pollution_PM10}, {GEO.country, TIME.year}>
+7;Find all the datasets with regions, months and subsectors, and NOx values;<{pollution_NOx}, {GEO.region, TIME.month, SECTOR.subsector}>
+8;I want to analyse country data and the emissions of CO2;<{pollution_CO2}, {GEO.country}>
+9;Gimme data aggregated by region and subsector for all the years;<{pollution_CO2, pollution_CO2e100, pollution_CO2e20, pollution_CH4, pollution_N2O, pollution_PM2_5, pollution_PM10, pollution_NH3, pollution_SOx, pollution_SO2, pollution_CO, pollution_NOx, pollution_NMVOCs, pollution_BC, pollution_OC, pollution_AS, pollution_CD, pollution_CR, pollution_CU, pollution_HG, pollution_NI, pollution_PB, pollution_SE, pollution_ZN}, {GEO.region, TIME.year, SECTOR.subsector}>
+10;Collect greenhouse gas emissions for country, year and subsector;<{pollution_CO2, pollution_CO2e100, pollution_CO2e20, pollution_CH4, pollution_N2O}, {GEO.country, TIME.year, SECTOR.subsector}>
+11;Find datasets containing CO2 measured by geography and temporal dimensions;<{pollution_CO2}, {GEO.country, TIME.year}>
+12;I want to aanlyse air pollution aggregated by region, month and sector;<{pollution_CO2, pollution_CO2e100, pollution_CO2e20, pollution_CH4, pollution_N2O, pollution_PM2_5, pollution_PM10, pollution_NH3, pollution_SOx, pollution_SO2, pollution_CO, pollution_NOx, pollution_NMVOCs, pollution_BC, pollution_OC, pollution_AS, pollution_CD, pollution_CR, pollution_CU, pollution_HG, pollution_NI, pollution_PB, pollution_SE, pollution_ZN}, {GEO.region, TIME.month, SECTOR.macrosector}>
+13;Find data about PM10 and PM2.5 for sectors;<{pollution_PM10, pollution_PM2_5}, {SECTOR.macrosector}>
+14;Find particulate matter emissions in datasets with continents and years;<{pollution_PM2_5, pollution_PM10}, {GEO.continent, TIME.year}>
+15;I would like to obtain data about CO2, NOx and NO2 for each region, month and subsector;<{pollution_CO2, pollution_NOx}, {GEO.region, TIME.month, SECTOR.subsector}>
+16;I want to analyse pollution;Not sure
+17;Give me data about air emissions aggregated by industry;<{pollution_CO2, pollution_CH4, pollution_N2O, pollution_PM2_5, pollution_PM10, pollution_NH3, pollution_SOx, pollution_SO2, pollution_CO, pollution_NOx, pollution_NMVOCs, pollution_BC, pollution_OC}, {SECTOR.macrosector}>
+18;Gather data suorces contianing SO2, C4H and AS for cities and centuries;Not sure.
+19;Give me results for SO2, Nox and N2O;Not sure
+20;I want pollutant indicators for cities;Not sure
