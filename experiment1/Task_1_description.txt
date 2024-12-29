@@ -1,0 +1,24 @@
+Base prompt : = "Write a query for a dataset discovery system which finds data sources based on the requested information, given a user query written in natural language.   
+Data sources are structured in 3 dimensions: geo, time and sector; each with one or more dimensional levels. Geo has levels continent, country and region. Time has levels year and month. Sector has levels macrosector and subsector. There are 24 measures: 
+pollution_CO2  (Carbon Dioxide, greenhouse gas)
+pollution_CO2e100, pollution_CO2e20 (CO2 equivalents over 100 and 20 years)
+pollution_CH4 (Methane, greenhouse gas)
+pollution_N2O (Nitrous Oxide, greenhouse gas)
+pollution_PM2_5 (Particulate Matter – fine inhalable liquid and solid particles, higher health – respiratory and circulatory systems - risks than PM10)
+pollution_PM10 (Particulate Matter – inhalable liquid and solid particles)
+pollution_NH3 (Ammonia, irritating gas and poisonous in large quantities)
+pollution_SOx (Suplhur Oxides, toxic irritating gases which cause respirartory dideases)
+pollution_SO2 (Sulfur Dioxide)
+pollution_CO (Carbon Monoxide, toxic gas which inhibits the body’s ability to carry oxygen)
+pollution_NOx (Nitrogen Oxides, adverse affect on the respiratory system)
+pollution_NMVOCs (Non-methane volatile organic compounds)
+pollution_BC (Black Carbon), pollution_OC (Organic Carbon)
+pollution_AS (Arsenic), pollution_CD (Cadmium), pollution_CR (Chromium), pollution_CU (Copper), pollution_HG (Mercury), pollution_NI (Nickel), pollution_PB (Lead), pollution_SE (Selenium), pollution_ZN (Zinc)
+A query is formatted as <I,L>, where: I is a set of measures, L is a set of levels. Each level must belong to different dimensions; if the query includes levels of the same dimension, then consider the one with lower granularity. I will provide some examples:
+<{pollution_CO2}, {GEO.country, TIME.year, SECTOR.subsector}>
+<{pollution_PM2_5, pollution_CH4}, {GEO.region, TIME.month, SECTOR.macrosector}>
+<{pollution_N20, pollution_CO2}, {GEO.country, TIME.year}> 
+The user will provide a textual description of the request, and you need to output the corresponding query. If the query does not contain I or L, or the user specifies unknown I and L, always ask for clarification. In case you need it, you can ask the user to disambiguate the request. Therefore, you can only answer by writing the query (without other explainations) or by asking for clarifications if you need additional information in order to disambiguate the user request. You can answer "Not sure" if you are not sure of the answer. Request=<request>"
+
+
+<request> : = ["I want to analyse pollution (PM2.5 and CO2) by country and year", "I want data sources which measure CH4 emissions by country, year and macro sectors", "Gather data about PM2.5 aggregated by region and subsector for all the years", "I would like to join data sources containing NH3 and CO2 pollutants where indicators are aggregated by country, year and subsectors", "I wish to analyse CH4, CO and PM10 air pollution indicators measured by country and months, also with information about subsectors", "Collect data sources containing PM10 values for all the countries and years", "Find all the datasets with regions, months and subsectors, and NOx values", "I want to analyse country data and the emissions of CO2", "Gimme data aggregated by region and subsector for all the years", "Collect greenhouse gas emissions for country, year and subsector", "Find datasets containing CO2 measured by geography and temporal dimensions", "I want to analyse air pollution aggregated by region, month and sector", "Find data about PM10 and PM2.5 for sectors", "Find particulate matter emissions in datasets with continents and years", "I would like to obtain data about CO2, NOx and NO2 for each region, month and subsector", "I want to analyse pollution", "Give me data about air emissions aggregated by industry", "Gather data suorces contianing SO2, CH4 and AS for cities and days", "Give me results for SO2, Nox and N2O", "I want pollutant indicators for cities"]

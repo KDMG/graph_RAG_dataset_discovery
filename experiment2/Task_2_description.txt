@@ -1,4 +1,4 @@
-You are a recommendation system for a data catalog. Every source includes one or many measures and one or many dimensional attributes. 
+Base prompt := "You are a recommendation system for a data catalog. Every source includes one or many measures and one or many dimensional attributes. 
 Dimensions: 
 -Time
 	Levels: Year, Month
@@ -32,3 +32,7 @@ subsector = {'POWER': ['Electricity generation','Other energy use','Heat plants'
 'Other mining and quarrying'],'FORESTRY AND LAND USE':[
 'Net Forest & Mangrove Carbon Stock Change','Net Grassland Carbon Stock Change',
 'Net Wetland Net Carbon Stock Change','Water reservoirs']
+
+Request=<request>"
+
+Request := ["I want to analyse pollution (PM2.5 and CO2) by country and year","I want data sources which measure CH4 emissions by country, year and macro sectors","Gather data about PM2.5 aggregated by region and subsector for all the years","I would like to join data sources containing NH3 and CO2 pollutants where indicators are aggregated by country, year and subsectors","I wish to analyse CH4, CO and PM10 air pollution indicators measured by country and months, also with information about subsectors","Collect data sources containing PM10 values for all the countries and years","Find all the datasets with regions, months and subsectors, and NOx values","I want to analyse country data and the emissions of CO2","Gimme data aggregated by region and subsector for all the years","Collect greenhouse gas emissions for country, year and subsector","Find datasets containing CO2 measured by geography and temporal dimensions","I want to aanlyse air pollution aggregated by region, month and sector","Find data about PM10 and PM2.5 for sectors","Find particulate matter emissions in datasets with continents and years","I would like to obtain data about CO2, NOx and NO2 for each region, month and subsector","I want to analyse pollution","Give me data about air emissions aggregated by industry","Gather data suorces contianing SO2, C4H and AS for cities and centuries","Give me results for SO2, Nox and N2O","I want pollutant indicators for cities"]
