@@ -19,3 +19,5 @@ Query No.;Prompt;Response
 18;Gather data suorces contianing SO2, C4H and AS for cities and centuries;Not sure.
 19;Give me results for SO2, Nox and N2O;Not sure
 20;I want pollutant indicators for cities;Not sure
+21;Sector by year and country;<{},{GEO.country, TIME.year, SECTOR.macrosector}>
+22;Year by year and sector;<{},{TIME.year, SECTOR.macrosector}>
